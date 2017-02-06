@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block css %}
+<style type="text/css">
+.profile{
+    border:solid 1px gray;
+    width:500px;
+    display: inline-block
+  }
+  img {
+  	border:solid 1px gray;
+  	position:relative;
+  	bottom:120px;
+  }
+  #name{
+  	background:gray
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+<h1>Profile</h1>
+<hr/>
+<img src="{{ url_for('static', filename = 'Roed.jpg') }}"/>
+<div class=profile>
+	<p id=name>Ramone Granston</p>
+	<p>Today's date is {{ time }}</p>
+	<hr/>
+	<p><strong>Username:</strong>Tamoya</p>
+	<p><strong>ID Number:</strong>620078653</p>
+	<p><strong>Age:</strong>21</p>
+	<p><strong>Gender:</strong>Male</p>
+	<hr/>
+	<p>I am a strong believer in doing whats best for yourself </p>
+</div>
+{% endblock %}
